@@ -59,7 +59,7 @@ jobs:
       - name: Checkout kustomize repository
         uses: actions/checkout@v2
         with:
-          repository: ${{ env.GITHUB_USERNAME }}/k8s-manifest-repo
+          repository: dltjgusdltjgus/k8s-manifest-repo
           ref: main
           token: ${{ secrets.ACTION_TOKEN }}
           path: k8s-manifest-repo
@@ -78,6 +78,6 @@ jobs:
         run: |
           cd k8s-manifest-repo
           git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
+          git config --global user.name "dltjgusdltjgus"
           git commit -am "Update image tag"
           git push -u origin main
